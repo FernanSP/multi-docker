@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true fernansp/react-test npm run test
 
 after_succes:
-  - docker build -t fernansp/multi-client ./client
-  - docker build -t fernansp/multi-nginx ./nginx
-  - docker build -t fernansp/multi-server ./server
-  - docker build -t fernansp/multi-worker ./worker
+  - docker build -t fersab89/multi-client ./client
+  - docker build -t fersab89/multi-nginx ./nginx
+  - docker build -t fersab89/multi-server ./server
+  - docker build -t fersab89/multi-worker ./worker
   #Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push them to docker hub
