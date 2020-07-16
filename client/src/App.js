@@ -18,17 +18,19 @@ function App() {
             className = "App-logo"
             alt = "logo" / >
             <
-            h1 classname = "App-title" > Welcome to React < /h1> <
-            Link to = "/" > Home < /Link> <
-            Link to = "/otherpage" > Other Page < /Link> <
+            h1 classname = "App-title" > Welcome to React < /h1>  <
+            Link to = "/" > Home < /Link>  <
+            Link to = "/otherpage" > Other Page < /Link>  <
+            /header> <
             div >
             <
             Route exact path = "/"
             component = { Fib }
-            /> <
+            />  <
             Route exact path = "/otherpage"
             component = { OtherPage }
-            /> <
+            />   <
+            /div>   <
             /div> <
             /Router>
         );
