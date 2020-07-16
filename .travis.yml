@@ -16,7 +16,7 @@ after_succes:
   #Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #Take those images and push them to docker hub
-  - docker push fernansp/multi-client
-  - docker push fernansp/multi-nginx
-  - docker push fernansp/multi-server
-  - docker push fernansp/multi-worker
+  - docker push fersab89/multi-client
+  - docker push fersab89/multi-nginx
+  - docker push fersab89/multi-server
+  - docker push fersab89/multi-worker
