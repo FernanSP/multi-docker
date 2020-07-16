@@ -21,7 +21,7 @@ class Fibs extends Component {
     async fetchesIndexes() {
         const seenIndexes = await axios.get('/api/values/all');
         this.setState({
-            seenIndexes.data
+            seenIndexes: seenIndexes.data
         });
     }
 
@@ -42,11 +42,10 @@ class Fibs extends Component {
         const entries = [];
 
         for (let key in this.state.values) {
-            entries.push( <
-                div key = { key } >
-                For index { key }
-                I calculated { this.state.values[key] } <
-                /div>
+            entries.push( 
+                <div key = { key } >
+                    For index { key }I calculated { this.state.values[key] } 
+                </div>
             );
         }
 
@@ -54,24 +53,17 @@ class Fibs extends Component {
     }
 
     render() {
-        return ( <
-            div >
-            <
-            form onSubmit = { this.handleSubmit } >
-            <
-            label > Enter your index: < /label> <
-            input value = { this.state.index }
-            onChange = {
-                event => this.setState({ index: event.target.value }) / >
-                <
-                button > Submit < /button> < /
-                form > <
-                h3 > Indexes I have seen: < /h3> { this.renderSeenIndexes }
-
-                    <
-                    h3 > Calculated values < /h3> { this.renderValues() } < /
-                div >
-            )
+        return ( 
+            <div>
+                <form onSubmit = { this.handleSubmit } >
+                    <label> Enter your index: </label> 
+                    <input value = { this.state.index } onChange = {event => this.setState({ index: event.target.value })}/>
+                    <button> Submit </button> 
+                </form> 
+                    <h3> Indexes I have seen: </h3> { this.renderSeenIndexes }
+                    <h3> Calculated values </h3> { this.renderValues() }
+            </div>
+            );
         }
     }
 
