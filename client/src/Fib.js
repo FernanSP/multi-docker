@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Fibs extends Component {
+class Fib extends Component {
     state = {
         seeIndexes: [],
         values: {},
